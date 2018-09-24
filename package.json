@@ -1,0 +1,23 @@
+{
+  "name": "azure-functions-nodejs-table-storage-crud",
+  "version": "1.0.0",
+  "description": "Azure Function sample showing how to CRUD with NodeJS & Azure Table Storage",
+  "main": "index.js",
+  "dependencies": {
+    "azure-storage": "^2.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasPe/Azure-Functions-NodeJS-Table-Storage-CRUD.git"
+  },
+  "author": "Thomas Pentenrieder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasPe/Azure-Functions-NodeJS-Table-Storage-CRUD/issues"
+  },
+  "homepage": "https://github.com/ThomasPe/Azure-Functions-NodeJS-Table-Storage-CRUD#readme"
+}
