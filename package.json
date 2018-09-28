@@ -4,7 +4,8 @@
   "description": "Azure Function sample showing how to CRUD with NodeJS & Azure Table Storage",
   "main": "index.js",
   "dependencies": {
-    "azure-storage": "^2.10.1"
+    "azure-storage": "^2.10.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {},
   "scripts": {
