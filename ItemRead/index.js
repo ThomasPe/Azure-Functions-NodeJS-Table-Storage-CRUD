@@ -4,7 +4,8 @@ const tableService = azure.createTableService();
 const tableName = "mytable";
 
 module.exports = function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+    context.log('Start ItemRead');
+
     const id = req.query.id;
     if (id) {
         // return item with RowKey 'id'

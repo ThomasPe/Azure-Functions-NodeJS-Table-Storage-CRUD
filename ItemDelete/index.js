@@ -1,16 +1,27 @@
-module.exports = function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+const azure = require('azure-storage');
 
-    if (req.query.name || (req.body && req.body.name)) {
-        context.res = {
-            // status: 200, /* Defaults to 200 */
-            body: "Hello " + (req.query.name || req.body.name)
-        };
+const tableService = azure.createTableService();
+const tableName = "mytable";
+
+module.exports = function (context, req) {
+    context.log('Start ItemDelete');
+
+    const id = req.query.id;
+    if (id) {
+        // create a temporary object with PartitionKey & RowKey of the item which should be deleted
+        var item = { PartitionKey: 'Partition', RowKey: id };
+        tableService.deleteEntity(tableName, item, function (error, result, response) {
+            if (!error) {
+                context.res.status(204).send();
+            }
+            else {
+                context.res.status(500).json({error : error});
+            }
+        });
     }
     else {
-        context.res = {
-            status: 400,
-            body: "Please pass a name on the query string or in the request body"
-        };
+        // item to delete can't be found since no ID was passed
+        context.res.status(404).send();
     }
+
 };

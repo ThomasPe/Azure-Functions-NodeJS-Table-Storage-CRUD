@@ -19,7 +19,7 @@ module.exports = function (context, req) {
         // Use { echoContent: true } if you want to return the created item including the Timestamp & etag
         tableService.insertEntity(tableName, item, { echoContent: true }, function (error, result, response) {
             if (!error) {
-                context.res.status(201).json(result);
+                context.res.status(201).json(response);
             } else {
                 context.res.status(500).json({ error: error });
             }
@@ -30,5 +30,6 @@ module.exports = function (context, req) {
             status: 400,
             body: "Please pass an item in the request body"
         };
+        context.done();
     }
 };
