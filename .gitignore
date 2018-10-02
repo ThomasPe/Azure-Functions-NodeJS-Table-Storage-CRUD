@@ -59,7 +59,7 @@ typings/
 
 # next.js build output
 .next
-local.settings.json
+_local.settings.json
 
 
 # Azure Function Famework files
