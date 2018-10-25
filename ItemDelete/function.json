@@ -9,7 +9,7 @@
       "methods": [
         "delete"
       ],
-      "route": "item"
+      "route": "items/{id}"
     },
     {
       "type": "http",

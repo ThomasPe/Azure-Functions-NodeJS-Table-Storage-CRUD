@@ -9,7 +9,7 @@
       "methods": [
         "put"
       ],
-      "route": "items"
+      "route": "items/{id}"
     },
     {
       "type": "http",

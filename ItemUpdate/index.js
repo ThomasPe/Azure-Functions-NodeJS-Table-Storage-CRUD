@@ -6,10 +6,13 @@ const tableName = "mytable";
 module.exports = function (context, req) {
     context.log('Start ItemUpdate');
 
+    const id = req.params.id;
     if (req.body) {
 
         // TODO: Add some object validation logic
         const item = req.body;
+        // Use the ID from the URL for the RowKey 
+        item.RowKey = id;
 
         // Depending on how you want this to behave you can also use tableService.mergeEntity
         tableService.replaceEntity(tableName, item, function (error, result, response) {
