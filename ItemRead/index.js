@@ -6,7 +6,7 @@ const tableName = "mytable";
 module.exports = function (context, req) {
     context.log('Start ItemRead');
 
-    const id = req.query.id;
+    const id = req.params.id;
     if (id) {
         // return item with RowKey 'id'
         tableService.retrieveEntity(tableName, 'Partition', id, function (error, result, response) {

@@ -8,7 +8,8 @@
       "name": "req",
       "methods": [
         "delete"
-      ]
+      ],
+      "route": "item"
     },
     {
       "type": "http",
