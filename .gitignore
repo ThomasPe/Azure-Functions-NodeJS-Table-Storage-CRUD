@@ -65,3 +65,4 @@ _local.settings.json
 # Azure Function Famework files
 bin/
 obj/
+package-lock.json
