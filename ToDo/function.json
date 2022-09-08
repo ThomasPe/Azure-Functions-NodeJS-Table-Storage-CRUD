@@ -1,5 +1,4 @@
 {
-  "disabled": false,
   "bindings": [
     {
       "authLevel": "anonymous",
@@ -7,14 +6,18 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "put"
+        "get",
+        "post",
+        "put",
+        "delete"
       ],
-      "route": "items/{id}"
+      "route": "todos/{*id}"
     },
     {
       "type": "http",
       "direction": "out",
       "name": "res"
     }
-  ]
+  ],
+  "scriptFile": "../dist/ToDo/index.js"
 }
